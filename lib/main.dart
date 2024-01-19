@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/segunda_pantalla.dart';
 import 'package:flutter_application_1/tercera_pantalla.dart';
 
 void main() => runApp(MyApp());
@@ -38,15 +39,15 @@ class FirstScreen extends StatelessWidget {
                 Text("NINGUN ARGENTINO SOLO EN EL MUNDO", style: TextStyle(
                   fontWeight: FontWeight.w700,
                   fontStyle: FontStyle.italic,
-                  color: Colors.blue,
+                  color: Colors.black87,
                   fontSize: 19.0,
                 )),
                 SizedBox(height: 110,),
                 Row(mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("MAT", style: TextStyle(color: Colors.lightBlueAccent,
+                    Text("MAT", style: TextStyle(color: Colors.black87,
                         fontWeight: FontWeight.bold,fontSize: 50),),
-                    Text("ECITO", style: TextStyle(color: Colors.yellow,
+                    Text("ECITO", style: TextStyle(color: Colors.yellowAccent,
                         fontWeight: FontWeight.bold,fontSize: 50),)
                   ],),
                 Row(
@@ -95,24 +96,32 @@ class FirstScreen extends StatelessWidget {
                 SizedBox(height: 286),
                 Row(
                     children: [
-                      Container(
-                          color: Colors.lightBlueAccent,
-                          height: 70,
-                          width: 196,
-                          child: Column(
-                            children: [
-                              SizedBox(height: 10,),
-                              Row(mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(Icons.login, size: 30,)
-                                ],),
-                              Row(mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text("REGISTRO", style: TextStyle(
-                                      fontWeight: FontWeight.bold),)
-                                ],)
-                            ],
-                          )
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => SegundaPantalla()),
+                          );
+                        },
+                        child: Container(
+                            color: Colors.lightBlueAccent,
+                            height: 70,
+                            width: 196,
+                            child: Column(
+                              children: [
+                                SizedBox(height: 10,),
+                                Row(mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(Icons.login, size: 30,)
+                                  ],),
+                                Row(mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text("REGISTRO", style: TextStyle(
+                                        fontWeight: FontWeight.bold),)
+                                  ],)
+                              ],
+                            )
+                        ),
                       ),
                       GestureDetector(
                         onTap: () {

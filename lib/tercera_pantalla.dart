@@ -9,14 +9,14 @@ class TerceraPantalla extends StatelessWidget {
         leading: Container(
           padding: EdgeInsets.all(10.0),
           child: IconButton(
-            icon: Icon(Icons.arrow_back,color: Colors.white,),
+            icon: Icon(Icons.arrow_back,color: Colors.black87,),
             onPressed: () {
               Navigator.of(context).pop();
             },
           ),
         ),
         title: Container(
-          child: Text('Ubicación de los usuarios',style: TextStyle(color: Colors.white),
+          child: Text('Ubicación de los usuarios',style: TextStyle(color: Colors.black87),
           ),
         ),
         shape: ContinuousRectangleBorder(
