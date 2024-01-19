@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-class MyMapScreen extends StatelessWidget {
+class TerceraPantalla extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.lightBlueAccent,
         leading: Container(
           padding: EdgeInsets.all(10.0),
           child: IconButton(
